@@ -1,5 +1,6 @@
 ---
 import Hero from "../components/Hero.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <html lang="en">
@@ -16,7 +17,7 @@ import Hero from "../components/Hero.astro";
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
           <!-- Navbar -->
-          <div class="navbar bg-base-300 w-full">
+          <div class="navbar bg-base-300 w-full fixed z-20">
             <div class="flex-none lg:hidden">
               <label
                 for="my-drawer-3"
@@ -52,7 +53,7 @@ import Hero from "../components/Hero.astro";
                   ></path>
                 </svg>
                 <h1 class="text-lg hidden sm:block text-primary">
-                  Astro + Tailwind CSS + DaisyUI Template
+                  Astro Template V.1
                 </h1>
               </div>
             </div>
@@ -66,6 +67,7 @@ import Hero from "../components/Hero.astro";
           </div>
           <!-- Main Content -->
           <Hero />
+          <Carousel />
         </div>
         <div class="drawer-side">
           <label

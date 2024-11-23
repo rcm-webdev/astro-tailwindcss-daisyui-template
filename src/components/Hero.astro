@@ -1,17 +1,87 @@
 ---
-
+import HeroSVG from "../../public/svg/LovingDoodle.svg";
+import Avatar from "../components/Avatar.astro";
 ---
 
-<div
-  class="hero min-h-screen"
-  style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);"
->
-  <div class="hero-overlay bg-opacity-60"></div>
-  <div class="hero-content text-neutral-content text-center">
-    <div class="max-w-md">
-      <h1 class="mb-5 text-5xl font-bold">Hero Section</h1>
-      <p class="mb-5">Hero Description</p>
-      <button class="btn btn-primary">Primary Button</button>
+<section class="relative mt-14">
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src="../../public/video/water.mp4" type="video/mp4" />
+  </video>
+  <div
+    class="absolute inset-0 bg-gray-900/75 sm:bg-gradient-to-r sm:from-gray-900/95 sm:to-neutral-50/10"
+  >
+  </div>
+
+  <div
+    class="relative flex flex-col sm:flex-row items-center justify-around mx-4 mt-4 text-center lg:text-left mb-4 overflow-hidden"
+  >
+    <div class="max-w-auto flex flex-col items-center sm:items-start">
+      <h1
+        class="text-4xl md:text-7xl sm:text-5xl font-extrabold text-neutral-50"
+      >
+        Astro Template
+
+        <strong class="block font-extrabold text-accent">
+          build websites faster.
+        </strong>
+      </h1>
+
+      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
+        Astro template with Tailwind CSS and DaisyUI components. Custom template
+        with sections for making websites that are fast and responsive.
+      </p>
+
+      <div class="mt-8 flex sm:flex-row flex-col items-center gap-4">
+        <a
+          href="#"
+          class="btn btn-wide btn-accent text-sm font-medium sm:w-auto"
+        >
+          Get Started
+        </a>
+
+        <a
+          href="#"
+          class="btn btn-wide text-accent text-sm font-medium sm:w-auto"
+        >
+          Learn More
+        </a>
+      </div>
+      <Avatar />
+    </div>
+
+    <div
+      class="relative w-1/2 h-[300px] sm:h-[400px] md:h-[500px] hidden lg:block"
+    >
+      <!-- Adjust height as needed -->
+      <img
+        src={HeroSVG.src}
+        alt="Hero"
+        class="w-full h-full object-cover absolute bg-gradient-to-tr from-[#7F7FD5]/65 via-[#86A8E7]/65 to-[#91EAE4]/65 rounded-3xl"
+      />
+      <div
+        class="mockup-code absolute top-[75%] left-0 transform -translate-x-1/2 -translate-y-1/2 z-10"
+      >
+        <pre data-prefix="$"><code>npm i tailwindcss</code></pre>
+        <pre
+          data-prefix=">"
+          class="text-warning"><code>installing...</code></pre>
+        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+      </div>
+      <div
+        class="mockup-code absolute bottom-[45%] left-[90%] transform -translate-x-1/2 -translate-y-1/2 z-10"
+      >
+        <pre data-prefix="$"><code>npm i daisyui</code></pre>
+        <pre
+          data-prefix=">"
+          class="text-warning"><code>installing...</code></pre>
+        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+      </div>
     </div>
   </div>
-</div>
+</section>
