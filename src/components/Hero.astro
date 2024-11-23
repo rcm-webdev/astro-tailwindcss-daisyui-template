@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import HeroSVG from "../../public/svg/LovingDoodle.svg";
 import Avatar from "../components/Avatar.astro";
 ---
@@ -59,9 +60,12 @@ import Avatar from "../components/Avatar.astro";
       class="relative w-1/2 h-[300px] sm:h-[400px] md:h-[500px] hidden lg:block"
     >
       <!-- Adjust height as needed -->
-      <img
-        src={HeroSVG.src}
+      <Image
+        src={HeroSVG}
         alt="Hero"
+        width={HeroSVG.width}
+        height={HeroSVG.height}
+        loading="eager"
         class="w-full h-full object-cover absolute bg-gradient-to-tr from-[#7F7FD5]/65 via-[#86A8E7]/65 to-[#91EAE4]/65 rounded-3xl"
       />
       <div
